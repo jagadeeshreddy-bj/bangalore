@@ -2,4 +2,4 @@ FROM tomcat:latest
 
 MAINTAINER Jagadeesh
 
-COPY ./webapp.war /usr/local/tomcat/webapps
+COPY ./var/lib/jenkins/workspace/sampleproject/target/*.war /usr/local/tomcat/webapps
