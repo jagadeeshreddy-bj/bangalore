@@ -5,7 +5,7 @@ pipeline{
       PATH = "/opt/maven3/bin:$PATH"
     }
     stages{
-        stage("welcome"){
+        stage("Git Checkout"){
             steps{
                 git credentialsId: 'github', url: 'https://github.com/jagadeeshreddy-bj/bangalore.git'
             }
