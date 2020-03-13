@@ -2,19 +2,20 @@ pipeline{
     agent any
     
     environment{
-      PATH = "/opt/maven3/bin:$PATH"
+        PATH = "apache-maven-3.6.3/bin:$PATH"
     }
+    
     stages{
         stage("Git Checkout"){
             steps{
                 git credentialsId: 'github', url: 'https://github.com/jagadeeshreddy-bj/bangalore.git'
             }
+        }
         stage("Maven Build"){
             steps{
-            sh "mvn clean package"
+                sh 'mvn --version'
             }
-        }
-            
-        }
+        }   
+       
     }
 }
